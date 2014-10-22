@@ -15,14 +15,14 @@
   tags: pagespeed_setup
 
 - name: pagespeed | Add package
-  action: command dpkg -i mod-pagespeed-*.deb
+  apt: deb={{ pagespeed_dir_tmp }}/{{ pagespeed_package_deb }}
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
   tags: pagespeed_setup
   
-- name: pagespeed | Install package
-  action: command apt-get -f install
-  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-  tags: pagespeed_setup
+#- name: pagespeed | Install package
+#  action: command apt-get -f install
+#  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+#  tags: pagespeed_setup
   
 - name: pagespeed | Cleanup temporary directory
   file: name={{ tempdir.stdout }} state=absent
