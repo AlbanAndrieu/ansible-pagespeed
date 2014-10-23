@@ -28,3 +28,5 @@
 - name: pagespeed | Cleanup temporary directory
   file: name={{ tempdir.stdout }} state=absent
   tags: pagespeed_setup
+
+- debug: msg=" pagespeed | See statisctics at http://localhost/pagespeed_console"

@@ -8,5 +8,6 @@ pagespeed_dir_tmp: "/tmp" # or override with "{{ tempdir.stdout }} in order to h
 #pagespeed_version: "{{pagespeed_major}}.{{pagespeed_minor}}"
 #pagespeed_archive_extracted: "pagespeed_{{pagespeed_version}}"
 #pagespeed_archive: "{{pagespeed_archive_extracted}}_Linux.tar.gz"
-pagespeed_package_deb: "mod-pagespeed-beta_current_amd64.deb"
+#pagespeed_package_deb: "mod-pagespeed-beta_current_amd64.deb"
+pagespeed_package_deb: "mod-pagespeed-stable_current_amd64.deb"
 pagespeed_url: "https://dl-ssl.google.com/dl/linux/direct/{{ pagespeed_package_deb }}"
