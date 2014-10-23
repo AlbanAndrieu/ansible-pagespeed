@@ -4,6 +4,8 @@ ansible-pagespeed
 A role for installing pagespeed.
 
 [![Build Status](https://api.travis-ci.org/AlbanAndrieu/ansible-pagespeed.png?branch=master)](https://travis-ci.org/AlbanAndrieu/ansible-pagespeed)
+[![Galaxy](http://img.shields.io/badge/galaxy-pagespeed-blue.svg?style=flat-square)](https://galaxy.ansible.com/list#/roles/1992)
+[![Tag](http://img.shields.io/github/tag/AlbanAndrieu/ansible-pagespeed.svg?style=flat-square)]()
 
 ## Actions
 
