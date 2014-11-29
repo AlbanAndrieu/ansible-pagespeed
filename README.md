@@ -1,6 +1,6 @@
-## pagespeed
+## alban.andrieu.pagespeed
 
-[![Travis CI](http://img.shields.io/travis/AlbanAndrieu/ansible-pagespeed.svg?style=flat)](http://travis-ci.org/AlbanAndrieu/ansible-pagespeed) [![Branch](http://img.shields.io/github/tag/AlbanAndrieu/ansible-pagespeed.svg?style=flat-square)](https://github.com/AlbanAndrieu/ansible-pagespeed/tree/master) [![Donate](https://img.shields.io/gratipay/AlbanAndrieu.svg?style=flat)](https://www.gratipay.com/AlbanAndrieu)  [![Ansible Galaxy](http://img.shields.io/badge/galaxy-AlbanAndrieu.pagespeed-blue.svg?style=flat)](https://galaxy.ansible.com/list#/roles/1992) [![Platforms](http://img.shields.io/badge/platforms-ubuntu-lightgrey.svg?style=flat)](#)
+[![Travis CI](http://img.shields.io/travis/AlbanAndrieu/ansible-pagespeed.svg?style=flat)](http://travis-ci.org/AlbanAndrieu/ansible-pagespeed) [![Branch](http://img.shields.io/github/tag/AlbanAndrieu/ansible-pagespeed.svg?style=flat-square)](https://github.com/AlbanAndrieu/ansible-pagespeed/tree/master) [![Donate](https://img.shields.io/gratipay/AlbanAndrieu.svg?style=flat)](https://www.gratipay.com/AlbanAndrieu)  [![Ansible Galaxy](http://img.shields.io/badge/galaxy-alban.andrieu.pagespeed-blue.svg?style=flat)](https://galaxy.ansible.com/list#/roles/1992) [![Platforms](http://img.shields.io/badge/platforms-ubuntu-lightgrey.svg?style=flat)](#)
 
 Ensures that pagespeed is installed (using apt)
 
@@ -10,17 +10,18 @@ This role requires at least Ansible `v1.6.3`.
 
 To install it, run:
 
-    ansible-galaxy install AlbanAndrieu.pagespeed
+    ansible-galaxy install alban.andrieu.pagespeed
 
+### Role dependencies
 
+- `geerlingguy.apache`
 
 ### Role variables
 
 List of default variables available in the inventory:
 
 ```yaml
-    ---
-    pagespeed_enabled: yes                       # Enable module
+        pagespeed_enabled: yes                       # Enable module
     
     pagespeed_dir_tmp: "/tmp" # or override with "{{ tempdir.stdout }} in order to have be sure to download the file"
     
@@ -44,7 +45,7 @@ Describe how to use in more detail...
 
 ### Authors and license
 
-`pagespeed` role was written by:
+`alban.andrieu.pagespeed` role was written by:
 - [Alban Andrieu](fr.linkedin.com/in/nabla/) | [e-mail](mailto:alban.andrieu@free.fr) | [Twitter](https://twitter.com/AlbanAndrieu) | [GitHub](https://github.com/AlbanAndrieu)
 - License: [GPLv3](https://tldrlegal.com/license/gnu-general-public-license-v3-%28gpl-3%29)
 

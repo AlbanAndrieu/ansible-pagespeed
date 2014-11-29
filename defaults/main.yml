@@ -1,4 +1,3 @@
----
 pagespeed_enabled: yes                       # Enable module
 
 pagespeed_dir_tmp: "/tmp" # or override with "{{ tempdir.stdout }} in order to have be sure to download the file"

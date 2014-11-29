@@ -1,7 +1,8 @@
 ---
 
-dependencies: []
-#  - { role: geerlingguy.apache }
+#dependencies: []
+dependencies: 
+  - { role: geerlingguy.apache }
 
 galaxy_info:
   author: Alban Andrieu
@@ -27,7 +28,9 @@ galaxy_info:
 
 ansigenome_info:
   galaxy_id: '1992'
-
+  galaxy_user: 'alban.andrieu'
+  galaxy_name: 'pagespeed'
+  
   travis: True
 
   authors:
