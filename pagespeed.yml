@@ -3,8 +3,3 @@
   sudo: true
   roles:
     - role: ./
-     
-  vars:     
-       docker_files_generated_directory         : ""  
-       
-

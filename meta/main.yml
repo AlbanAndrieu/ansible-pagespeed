@@ -6,7 +6,7 @@ dependencies:
 
 galaxy_info:
   author: Alban Andrieu
-  description: A role for installing pagespeed
+  description: Ansible role to install mod pagesspeed on apache
   company: Nabla
   license: GPLv3
   min_ansible_version: 1.6.3
@@ -41,7 +41,7 @@ ansigenome_info:
       github: 'AlbanAndrieu'
       
   synopsis: |
-    Ensures that pagespeed is installed (using apt)
+    Ensures that mod pagespeed is installed (using apt) on apache
 
   usage: |
     Describe how to use in more detail...
