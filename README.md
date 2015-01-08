@@ -2,7 +2,7 @@
 
 [![Travis CI](http://img.shields.io/travis/AlbanAndrieu/ansible-pagespeed.svg?style=flat)](http://travis-ci.org/AlbanAndrieu/ansible-pagespeed) [![Branch](http://img.shields.io/github/tag/AlbanAndrieu/ansible-pagespeed.svg?style=flat-square)](https://github.com/AlbanAndrieu/ansible-pagespeed/tree/master) [![Donate](https://img.shields.io/gratipay/AlbanAndrieu.svg?style=flat)](https://www.gratipay.com/AlbanAndrieu)  [![Ansible Galaxy](http://img.shields.io/badge/galaxy-alban.andrieu.pagespeed-blue.svg?style=flat)](https://galaxy.ansible.com/list#/roles/1992) [![Platforms](http://img.shields.io/badge/platforms-ubuntu-lightgrey.svg?style=flat)](#)
 
-Ensures that pagespeed is installed (using apt)
+Ensures that mod pagespeed is installed (using apt) on apache
 
 ### Installation
 
@@ -25,14 +25,7 @@ List of default variables available in the inventory:
     
     pagespeed_dir_tmp: "/tmp" # or override with "{{ tempdir.stdout }} in order to have be sure to download the file"
     
-    #pagespeed_major: "1"
-    #pagespeed_minor: "0.0"
-    #pagespeed_version: "{{pagespeed_major}}.{{pagespeed_minor}}"
-    #pagespeed_archive_extracted: "pagespeed_{{pagespeed_version}}"
-    #pagespeed_archive: "{{pagespeed_archive_extracted}}_Linux.tar.gz"
     pagespeed_package_arch: "amd64"
-    #pagespeed_package_arch: "i386"
-    #pagespeed_package_deb: "mod-pagespeed-beta_current_amd64.deb"
     pagespeed_package_deb: "mod-pagespeed-stable_current_{{ pagespeed_package_arch }}.deb"
     pagespeed_url: "https://dl-ssl.google.com/dl/linux/direct/{{ pagespeed_package_deb }}"
 ```
