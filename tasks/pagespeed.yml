@@ -1,10 +1,10 @@
 ---
-# This 
+# This
 
 - name: pagespeed | Create temporary directory
   shell: mktemp -d
   register: tempdir
-  sudo: true
+  become: true
   tags: pagespeed_setup
 
 - name: pagespeed | Download pagespeed
@@ -16,15 +16,14 @@
 
 - name: pagespeed | Add package
   apt: deb={{ pagespeed_dir_tmp }}/{{ pagespeed_package_deb }}
-  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-  when: pagespeed_download.changed  
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu' and pagespeed_download.changed
   tags: pagespeed_setup
-  
+
 #- name: pagespeed | Install package
 #  action: command apt-get -f install
 #  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 #  tags: pagespeed_setup
-  
+
 - name: pagespeed | Cleanup temporary directory
   file: name={{ tempdir.stdout }} state=absent
   tags: pagespeed_setup
