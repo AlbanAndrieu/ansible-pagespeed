@@ -13,11 +13,13 @@
     dest="{{ pagespeed_dir_tmp }}/"
   register: pagespeed_download
   tags: pagespeed_setup
+  become: true
 
 - name: pagespeed | Add package
   apt: deb={{ pagespeed_dir_tmp }}/{{ pagespeed_package_deb }}
-  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu' and pagespeed_download.changed
+  when: (ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu') and pagespeed_download.changed
   tags: pagespeed_setup
+  become: true
 
 #- name: pagespeed | Install package
 #  action: command apt-get -f install
@@ -27,5 +29,6 @@
 - name: pagespeed | Cleanup temporary directory
   file: name={{ tempdir.stdout }} state=absent
   tags: pagespeed_setup
+  become: true
 
 - debug: msg=" pagespeed | See statisctics at http://localhost/pagespeed_console"

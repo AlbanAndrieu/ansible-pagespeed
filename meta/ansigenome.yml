@@ -1,3 +1,30 @@
+---
+
+#dependencies: []
+dependencies:
+  - { role: geerlingguy.apache, become: true }
+
+galaxy_info:
+  author: Alban Andrieu
+  description: Ansible role to install mod pagesspeed on apache
+  company: Nabla
+  license: GPLv3
+  min_ansible_version: 2.1.1
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+    - lucid
+    - maverick
+    - natty
+    - oneiric
+    - precise
+    - quantal
+    - raring
+    - saucy
+    - trusty
+  categories:
+  - system
 
 ansigenome_info:
   galaxy_id: '1992'
