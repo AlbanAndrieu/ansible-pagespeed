@@ -1,6 +1,7 @@
 pagespeed_enabled: yes                       # Enable module
 
-pagespeed_dir_tmp: "/tmp" # or override with "{{ tempdir.stdout }} in order to have be sure to download the file"
+#pagespeed_dir_tmp: "/tmp" # or override with "{{ tempdir.stdout }} in order to have be sure to download the file"
+pagespeed_dir_tmp: "{{ tempdir.stdout }}"
 
 pagespeed_package_arch: "amd64"
 pagespeed_package_deb: "mod-pagespeed-stable_current_{{ pagespeed_package_arch }}.deb"
